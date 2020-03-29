@@ -24,12 +24,12 @@ sub wanted
 
 		edit_file_lines
 		{
-			s/^(banner_link_a =).*$/$1/;
-			s/^(link_name_a =).*$/$1/;
-			s/^(banner_link_b =).*$/$1/;
-			s/^(link_name_b =).*$/$1/;
-			s/^(loading_phrase =).*$/$1/;
-
+            s/^(icon =) ccc/$1/;
+			s/^(banner_link_a =) http:\/\/customscreators.com\//$1/;
+			s/^(link_name_a =) Custom Creators Collective Blog$/$1/;
+			s/^(banner_link_b =) http:\/\/db.customscreators.com\//$1/;
+			s/^(link_name_b =) Custom Creators Collective Song Database/$1/;
+			s/^(loading_phrase =) Brought to you by Customs Creators Collective/$1/;
 			s/^.*$// if (/^; Converted using C3/ .. /www.customscreators.com/);
 		} $_;
 	}
